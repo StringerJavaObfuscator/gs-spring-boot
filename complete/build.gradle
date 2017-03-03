@@ -1,9 +1,12 @@
 buildscript {
     repositories {
         mavenCentral()
+        flatDir { dirs '../../Stringer/stringer-ent-3.0.0' }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
+        classpath(":stringer-gradle-plugin:")
+		classpath(":stringer:")
     }
 }
 
@@ -11,10 +14,15 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'stringer'
 
 jar {
     baseName = 'gs-spring-boot'
     version =  '0.1.0'
+}
+
+stringer {
+    configFile "${projectDir}/stringer.xml"
 }
 
 repositories {
