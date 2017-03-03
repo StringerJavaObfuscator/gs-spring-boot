@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<stringer-v3>
+	<verbose>true</verbose>
+	<optimize>true</optimize>
+	<protectionElements>
+		<protectionElement>
+			<paths>
+				<path>hello/**</path>
+			</paths>  
+		</protectionElement>
+	</protectionElements>
+</stringer-v3>
