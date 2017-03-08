@@ -5,8 +5,10 @@
 	<protectionElements>
 		<protectionElement>
 			<paths>
-				<path>hello/**</path>
-			</paths>  
+			   <path>BOOT-INF/classes</path>
+			</paths>
+			<stringEncryption/>
+			<hideAccess/>  
 		</protectionElement>
 	</protectionElements>
 </stringer-v3>

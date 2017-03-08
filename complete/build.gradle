@@ -1,12 +1,15 @@
 buildscript {
+    ext {
+	    stringerVersion = '3.0.1'
+    }
     repositories {
         mavenCentral()
-        flatDir { dirs '../../Stringer/stringer-ent-3.0.0' }
+        mavenLocal()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
-        classpath(":stringer-gradle-plugin:")
-		classpath(":stringer:")
+        classpath("com.licel:stringer-gradle-plugin:"+rootProject.ext.stringerVersion)
+	    classpath("com.licel:stringer:"+rootProject.ext.stringerVersion)
     }
 }
 
