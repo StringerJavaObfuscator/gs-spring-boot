@@ -27,7 +27,7 @@ mvn install:install-file -Dfile=`pwd`/stringer-annotations.jar -DpomFile=`pwd`/s
 mvn install:install-file -Dfile=`pwd`/stringer-gradle-plugin.jar -DpomFile=`pwd`/stringer-gradle-plugin.pom
 ```
 
-== Build 
+## Building
 
 ```
 mvn clean install
