@@ -4,6 +4,7 @@ This fork of simple web application with Spring Boot is to demonstrate how to St
 
 == Description
 https://jfxstore.com/stringer/docs#maven-plugin
+
 https://jfxstore.com/stringer/docs#gradle-plugin
 
 == Requirements
@@ -12,12 +13,15 @@ https://jfxstore.com/stringer/docs#gradle-plugin
 
 == Configuring 
 - Maven: install Stinger and Stringer Maven plugin to local Maven repository:
+
 ---
 mvn install:install-file -Dfile=`pwd`/stringer.jar -DpomFile=`pwd`/stringer.pom
 mvn install:install-file -Dfile=`pwd`/stringer-annotations.jar -DpomFile=`pwd`/stringer-annotations.pom
 mvn install:install-file -Dfile=`pwd`/stringer-maven-plugin.jar -DpomFile=`pwd`/stringer-maven-plugin.pom
 ---
+
 - Gradle: install Stinger and Stringer Gradle plugin to local Maven repository::
+
 ---
 mvn install:install-file -Dfile=`pwd`/stringer.jar -DpomFile=`pwd`/stringer.pom
 mvn install:install-file -Dfile=`pwd`/stringer-annotations.jar -DpomFile=`pwd`/stringer-annotations.pom
@@ -28,10 +32,13 @@ mvn install:install-file -Dfile=`pwd`/stringer-gradle-plugin.jar -DpomFile=`pwd`
 ---
 mvn clean install
 ---
+
 or 
+
 ---
 ./gradlew install
 ---
+
 
 ---
 tags: [spring-boot, groovy, test]
