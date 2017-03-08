@@ -3,8 +3,8 @@
 This fork of the simple web application (https://github.com/StringerJavaObfuscator/gs-spring-boot) with Spring Boot is to demonstrate how to Stringer protection for this kind of applications.
 
 ## Description
-https://jfxstore.com/stringer/docs#maven-plugin
-https://jfxstore.com/stringer/docs#gradle-plugin
+- https://jfxstore.com/stringer/docs#maven-plugin
+- https://jfxstore.com/stringer/docs#gradle-plugin
 
 ## Requirements
 - Maven or Gradle
