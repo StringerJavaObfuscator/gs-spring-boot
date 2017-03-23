@@ -22,8 +22,9 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <stringer.version>3.0.1</stringer.version>
+        <stringer.config>${basedir}/stringer.xml</stringer.config>
     </properties>
-
 
     <build>
         <plugins>
@@ -31,7 +32,22 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>            
+                <groupId>com.licel</groupId>
+                <artifactId>stringer-maven-plugin</artifactId>
+                <version>${stringer.version}</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>stringer</goal>
+                        </goals>
+                        <configuration>
+                           <configFile>${stringer.config}</configFile>   
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-
 </project>
