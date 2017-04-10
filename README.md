@@ -8,7 +8,7 @@ This fork of the simple web application (https://github.com/StringerJavaObfuscat
 
 ## Requirements
 - Maven or Gradle
-- Stringer Standard or Enterpise with a valid license
+- Stringer Enterpise with a valid license
 
 ## Configuring 
 - Maven: install Stinger and Stringer Maven plugin to local Maven repository:
@@ -35,5 +35,5 @@ mvn clean install
 or 
 
 ```
-./gradlew install
+./gradlew clean assemble
 ```
