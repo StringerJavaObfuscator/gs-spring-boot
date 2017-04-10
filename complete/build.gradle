@@ -10,6 +10,7 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
         classpath("com.licel:stringer-gradle-plugin:"+rootProject.ext.stringerVersion)
 	    classpath("com.licel:stringer:"+rootProject.ext.stringerVersion)
+        classpath 'net.sf.proguard:proguard-gradle:5.3.3'
     }
 }
 
@@ -22,6 +23,15 @@ apply plugin: 'stringer'
 jar {
     baseName = 'gs-spring-boot'
     version =  '0.1.0'
+}
+
+task proguard(type: proguard.gradle.ProGuardTask) {
+    configuration 'proguard.txt'
+    injars jar.archivePath
+}
+
+jar.doLast {
+    tasks.proguard.execute()
 }
 
 stringer {
@@ -44,4 +54,5 @@ dependencies {
     testCompile("org.springframework.boot:spring-boot-starter-test")
     // end::tests[]
 }
+
 
